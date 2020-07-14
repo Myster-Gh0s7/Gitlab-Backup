@@ -1,7 +1,5 @@
 #!/bin/sh
 
-## DevOp Engineer : Mayur Chavhan | <3 Loves Linux
-
 
 BACKDIR="/var/opt/gitlab/backups/"
 BACKFILE=$(ls -ABrt1 $BACKDIR --group-directories-first | tail -n1)
@@ -33,4 +31,3 @@ echo -e "\n $BACKFILE"
 rsync --info=progress2 $BACKDIR$BACKFILE $DEST
 
 echo -e "\n Backup file "$BACKFILE" is copied to "$DEST""
-echo -e "\n Developed by Mayur Chavhan (8788016553)"
